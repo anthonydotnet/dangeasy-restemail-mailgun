@@ -16,7 +16,7 @@ PM> Install-Package DangEasy.RestEmail.Mailgun
 
 ## Setup
 ```
-var client = new Client(Your_ApiKey, new RequestBuilder(Your_Domain));
+var client = new Client("https://api.mailgun.net/v3", Your_ApiKey, new RequestBuilder(Your_Domain));
 ```
 
 ## Simple Email

@@ -23,7 +23,7 @@ namespace DangEasy.RestEmail.Mailgun.Test.Integration
         public When_Sending()
         {
             _requestBuilder = new RequestBuilder(Configuration["AppSettings:Domain"]);
-            _client = new Client(Configuration["AppSettings:ApiKey"], _requestBuilder);
+            _client = new Client(Configuration["AppSettings:BaseUrl"], Configuration["AppSettings:ApiKey"], _requestBuilder);
         }
 
 

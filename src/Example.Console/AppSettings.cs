@@ -5,5 +5,6 @@ namespace Example.Console
     {
         public string ApiKey { get; set; }
         public string Domain { get; set; }
+        public string BaseUrl { get; set; }
     }
 }

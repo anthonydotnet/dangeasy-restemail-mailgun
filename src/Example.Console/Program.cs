@@ -41,9 +41,9 @@ namespace Example.Console
             var textBody = "Hello";
             var htmlBody = "<html><h1>Hello</h1></html>";
             var fromEmail = "test@test.com";
-            var toEmail = "burner.a0dbafc6@tryninja.io"; // your recipient email
+            var toEmail = "dangeasy.77e19e@burnermail.io"; // your recipient email
 
-            var client = new Client(_settings.ApiKey, new RequestBuilder(_settings.Domain));
+            var client = new Client(_settings.BaseUrl, _settings.ApiKey, new RequestBuilder(_settings.Domain));
 
             // simple email
             var response = client.SendAsync(fromEmail, toEmail, "MailGun Test 1", htmlBody, textBody).Result;

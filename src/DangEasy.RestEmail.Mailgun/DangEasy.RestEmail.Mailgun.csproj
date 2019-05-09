@@ -7,7 +7,8 @@
     <Description>A simple easy to use implementation of Mailgun.</Description>
     <Copyright>Anthony Dang 2019</Copyright>
     <PackageProjectUrl>https://github.com/anthonydotnet/dangeasy-restemail-mailgun</PackageProjectUrl>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Added BaseUrl to Client constructor to handle different base API URLs.</PackageReleaseNotes>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

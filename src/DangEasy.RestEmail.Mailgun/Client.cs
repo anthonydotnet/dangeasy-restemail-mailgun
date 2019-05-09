@@ -14,11 +14,23 @@ namespace DangEasy.RestEmail
 
         private readonly IRestClient _client;
 
+        [Obsolete("Use other constructor to manually pass in a baseUrl.")]
         public Client(string apiKey, IRequestBuilder requestBuilder)
         {
             _client = new RestClient
             {
                 BaseUrl = new Uri("https://api.mailgun.net/v3"),
+                Authenticator = new HttpBasicAuthenticator("api", apiKey)
+            };
+
+            RequestBuilder = requestBuilder;
+        }
+
+        public Client(string baseUrl, string apiKey, IRequestBuilder requestBuilder)
+        {
+            _client = new RestClient
+            {
+                BaseUrl = new Uri(baseUrl),
                 Authenticator = new HttpBasicAuthenticator("api", apiKey)
             };
 
